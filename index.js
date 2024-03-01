@@ -5,7 +5,7 @@ function displaySongInfo() {
     let Description = document.getElementById("Description").value;
     let Year = document.getElementById("Year").value;
     //
-    let container = document.getElementById("songContainer");
+    let displayArea = document.getElementById("displayArea");
   
     // convert normal link to emb
     function createYouTubeEmbedLink(link) {
