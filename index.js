@@ -1,30 +1,81 @@
 
-  function displaySongInfo() {
-    let songName = document.getElementById("songName").value;
-    let songLink = document.getElementById("Link").value;
-    let Description = document.getElementById("Description").value;
-    let Year = document.getElementById("Year").value;
-    //
-    let container = document.getElementById("songContainer");
+  // function displaySongInfo() {
+  //   let songName = document.getElementById("songName").value;
+  //   let songLink = document.getElementById("Link").value;
+  //   let Description = document.getElementById("Description").value;
+  //   let Year = document.getElementById("Year").value;
+  //   //
+  //   let container = document.getElementById("songContainer");
+  
+  //   // convert normal link to emb
+  //   function createYouTubeEmbedLink(link) {
+  //     let links = String(link).replace("/watch?v=", "/embed/");
+  //     console.log(link);
+  //     return links;
+  //   }
+  //   //
+  //   container.innerHTML = `
+  //   <h1>song name: ${songName}</h1>
+  //   <h1>description: ${Description}</h1>
+  //   <h1>song year: ${Year}</h1>
+  //   <iframe width="560" height="315" src="${createYouTubeEmbedLink(
+  //     songLink
+  //   )}" frameborder="0" allowfullscreen></iframe>
+  //   `;
+  // }
+
+
+  // function displaySongInfo() {
+  //   let songName = document.getElementById("songName").value;
+  //   let songLink = document.getElementById("Link").value;
+  //   let Description = document.getElementById("Description").value;
+  //   let Year = document.getElementById("Year").value;
+  //   //
+  //   let container = document.getElementById("songContainer");
   
     // convert normal link to emb
-    function createYouTubeEmbedLink(link) {
-      let links = String(link).replace("/watch?v=", "/embed/");
-      console.log(link);
-      return links;
-    }
-    //
-    container.innerHTML = `
-    <h1>song name: ${songName}</h1>
-    <h1>description: ${Description}</h1>
-    <h1>song year: ${Year}</h1>
-    <iframe width="560" height="315" src="${createYouTubeEmbedLink(
-      songLink
-    )}" frameborder="0" allowfullscreen></iframe>
-    `;
+//     function createYouTubeEmbedLink(link) {
+//       let links = String(link).replace("/watch?v=", "/embed/");
+//       console.log(link);
+//       return links;
+//     }
+//     let container = document.getElementById("songContainer");
+//     //
+//     document.getElementById("iframe").src = createYouTubeEmbedLink(songLink);
+//     container.innerHTML = `
+//     <h1>song name: ${songName}</h1>
+//     <h1>description: ${Description}</h1>
+//     <h1>song year: ${Year}</h1>
+//     <iframe width="560" height="315" src="${createYouTubeEmbedLink(
+//       songLink
+//     )}" frameborder="0" allowfullscreen></iframe>
+//     `;
+  
+
+
+//  module.exports = {
+//      displaySongInfo: displaySongInfo,
+//  };  
+
+function displaySongInfo() {
+  let songName = document.getElementById("songName").value;
+  let songLink = document.getElementById("Link").value;
+  let Description = document.getElementById("Description").value;
+  let Year = document.getElementById("Year").value;
+  //
+
+  // convert normal link to emb
+  function createYouTubeEmbedLink(link) {
+    let links = String(link).replace("/watch?v=", "/embed/");
+    console.log(link);
+    return links;
   }
-
-
- module.exports = {
-     displaySongInfo: displaySongInfo,
- }; 
+  let container = document.getElementById("songContainer");
+  //
+  document.getElementById("iframe").src = createYouTubeEmbedLink(songLink);
+  container.innerHTML = `
+  <h1>song name: ${songName}</h1>
+  <h1>description: ${Description}</h1>
+  <h1>song year: ${Year}</h1>
+  `;
+}   
