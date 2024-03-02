@@ -7,22 +7,24 @@
   </head>
 
   <body>
-    <form action="" onsubmit="displaySongInfo(); return false; ">
-      <h1>Your Favorite Song</h1>
+    <form action="" onsubmit="displaySongInfo(); return false; "> 
+      
+       <h1>Your Favorite Song</h1>
       <label for="name"> Name </label>
-      <input type="text" id="songName" name="name" /> <br />
+      <input type="text" id="songName" name="name" required /> <br><br>
 
       <label for="Link"> Link </label>
-      <input type="text" id="Link" /> <br />
+      <input type="text" id="Link"  required/> <br><br>
 
-      <label for="Description"> Description </label>
-      <input type="textarea" id="Description" /> <br />
-
+      <label for="description">Description:</label><br>
+      <textarea id="description" name="description" rows="4" required></textarea><br><br>
+    
       <label for="Year"> Year </label>
-      <input type="number" id="Year" /> <br />
+      <input type="number" id="Year"  min="1900" mix="2025" required /> <br><br>
 
       <button type="submit">submit</button>
-    </form>
+    </form> 
+  
     <div id="songContainer"></div>
     <iframe
       id="iframe"

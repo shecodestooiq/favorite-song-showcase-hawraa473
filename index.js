@@ -1,7 +1,7 @@
 function displaySongInfo() {
   let songName = document.getElementById("songName").value;
   let songLink = document.getElementById("Link").value;
-  let Description = document.getElementById("Description").value;
+  let Description = document.getElementById("description").value;
   let Year = document.getElementById("Year").value;
   //
 
@@ -16,7 +16,7 @@ function displaySongInfo() {
   document.getElementById("iframe").src = createYouTubeEmbedLink(songLink);
   container.innerHTML = `
   <h1>song name: ${songName}</h1>
-  <h1>description: ${Description}</h1>
+  <h1>description: ${description}</h1>
   <h1>song year: ${Year}</h1>
   `;
 }
