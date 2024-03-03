@@ -1,22 +1,23 @@
  function displaysonginfo(){
-let fromSong =document.getElementById("fromSong");
-let songContainer =document.getElementById("songContainer");
-let songName=document.getElementById("songName").Value;
-let link =document.getElementById("link").Value;
-let iframe =document.getElementById("iframe");
+let fSong =document.getElementById("fromSong");
+let sContainer =document.getElementById("songContainer");
+let sgName=document.getElementById("songName").value ;
+//console.log(sgName);
+let ylink =document.getElementById("link").Value;
+let yiframe =document.getElementById("iframe");
 let Description =document.getElementById("Description").Value;
-let year =document.getElementById("year");
-iframe.src = link
-displaysonginfo.style.visibility = "visible";
-document.getElementById(songName).innerHTML = songName;
-document.getElementById(textSpace).innerHTML = Description;
-document.getElementById(year).innerHTML = year;
-fromSong.style.visibility = "hidden"
+let syr =document.getElementById("year");
+yiframe.src = ylink
+sContainer.style.visibility = 'visible';
+document.getElementById("sName").innerHTML = sgName;
+document.getElementById("textSpace").innerHTML = Description;
+document.getElementById("year").innerHTML = syr;
+fSong.style.visibility = 'hidden'
 }
-document.getElementById("song").addEventListener("submit" , function(event){
+document.getElementById("formSong").addEventListener("submit" , function(event){
     event.preventDefault();
     displaysonginfo();
-})
+});
     module.exports = {
         displaySongInfo: displaySongInfo,
     };

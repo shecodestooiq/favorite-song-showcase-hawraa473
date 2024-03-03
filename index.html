@@ -5,30 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Favorite Song Showcase</title>
   </head>
-  </head>
-
-</head>
-
   <body>
     <form action="" method="post" id="formSong">
       <h1>Your Favorite Song</h1>
-      <label for="name"> Name </label> <br>
+      <label for="songName"> Name </label> <br>
       <input type="text" id="songName" name="name" /> <br><br>
 
       <label for="Link"> Link </label> <br>
       <input type="text" id="Link" /> <br><br>
 
-      <label for=""> Description </label> <br>
+      <label for="Description"> Description </label> <br>
       <textarea name="Description" id="Description " cols="20" rows="5"></textarea> <br><br>
 
       <label for="Year"> Year </label> <br>
       <input type="number" id="Year" min="1900"  max="2025" required/> <br><br>
 
-      <button type="submit" onclick="">submit</button>
+      <button type="submit" onclick="displaysonginfo()">submit</button>
     </form>
     <div id="songContainer" style="visibility: hidden;">
-<h1>Song Name: <span id="songName"></span></h1>
-<h1>Youtube Link: <span id="Link"></span> </h1>
+<h1>Song Name: <span id="sName"></span></h1>
+<h1>Youtube Link: <span id="youtubeLink"></span> </h1>
     <iframe
       id="iframe"
       width="560"
@@ -39,7 +35,7 @@
     ></iframe> 
     <h1>Description</h1>
     <p id="textSpace"></p>
-    <h1>Song Year <span id="Year"></span></h1>
+    <h1>Song Year <span id="Yr"></span></h1>
 </div>
 
     <script src="index.js"></script>
