@@ -1,22 +1,22 @@
-function displaySongInfo() {
-  let songName = document.getElementById("songName").value;
-  let songLink = document.getElementById("Link").value;
-  let Description = document.getElementById("description").value;
-  let Year = document.getElementById("Year").value;
-  //
-
-  // convert normal link to emb
-  function createYouTubeEmbedLink(link) {
-    let links = String(link).replace("/watch?v=", "/embed/");
-    console.log(link);
-    return links;
-  }
-  let container = document.getElementById("songContainer");
-  //
-  document.getElementById("iframe").src = createYouTubeEmbedLink(songLink);
-  container.innerHTML = `
-  <h1>song name: ${songName}</h1>
-  <h1>description: ${description}</h1>
-  <h1>song year: ${Year}</h1>
-  `;
+ function displaysonginfo(){
+let fromSong =document.getElementById("fromSong");
+let songContainer =document.getElementById("songContainer");
+let songName=document.getElementById("songName").Value;
+let link =document.getElementById("link").Value;
+let iframe =document.getElementById("iframe");
+let Description =document.getElementById("Description").Value;
+let year =document.getElementById("year");
+iframe.src = link
+displaysonginfo.style.visibility = "visible";
+document.getElementById(songName).innerHTML = songName;
+document.getElementById(textSpace).innerHTML = Description;
+document.getElementById(year).innerHTML = year;
+fromSong.style.visibility = "hidden"
 }
+document.getElementById("song").addEventListener("submit" , function(event){
+    event.preventDefault();
+    displaysonginfo();
+})
+    module.exports = {
+        displaySongInfo: displaySongInfo,
+    };

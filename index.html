@@ -5,27 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Favorite Song Showcase</title>
   </head>
+  </head>
+
+</head>
 
   <body>
-    <form action="" onsubmit="displaySongInfo(); return false; "> 
-      
-       <h1>Your Favorite Song</h1>
-      <label for="name"> Name </label>
-      <input type="text" id="songName" name="name" required /> <br><br>
+    <form action="" method="post" id="formSong">
+      <h1>Your Favorite Song</h1>
+      <label for="name"> Name </label> <br>
+      <input type="text" id="songName" name="name" /> <br><br>
 
-      <label for="Link"> Link </label>
-      <input type="text" id="Link"  required/> <br><br>
+      <label for="Link"> Link </label> <br>
+      <input type="text" id="Link" /> <br><br>
 
-      <label for="description">Description:</label><br>
-      <textarea id="description" name="description" rows="4" required></textarea><br><br>
-    
-      <label for="Year"> Year </label>
-      <input type="number" id="Year"  min="1900" mix="2025" required /> <br><br>
+      <label for=""> Description </label> <br>
+      <textarea name="Description" id="Description " cols="20" rows="5"></textarea> <br><br>
 
-      <button type="submit">submit</button>
-    </form> 
-  
-    <div id="songContainer"></div>
+      <label for="Year"> Year </label> <br>
+      <input type="number" id="Year" min="1900"  max="2025" required/> <br><br>
+
+      <button type="submit" onclick="">submit</button>
+    </form>
+    <div id="songContainer" style="visibility: hidden;">
+<h1>Song Name: <span id="songName"></span></h1>
+<h1>Youtube Link: <span id="Link"></span> </h1>
     <iframe
       id="iframe"
       width="560"
@@ -33,9 +36,15 @@
       src=""
       frameborder="0"
       allowfullscreen
-    ></iframe>
+    ></iframe> 
+    <h1>Description</h1>
+    <p id="textSpace"></p>
+    <h1>Song Year <span id="Year"></span></h1>
+</div>
 
     <script src="index.js"></script>
   </body>
 </html>
+
+
 
