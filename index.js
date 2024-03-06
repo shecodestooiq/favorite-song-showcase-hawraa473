@@ -18,4 +18,6 @@ document.getElementById("song").addEventListener("submit" , function(event){
     displaySongInfo();
 }) 
 
-    export const displaySongInfo = displaySongInfo;
+    module.exports = {
+        displaySongInfo: displaySongInfo,
+    }
