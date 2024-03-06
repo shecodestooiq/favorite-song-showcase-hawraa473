@@ -16,7 +16,6 @@ function displaySongInfo(){
 document.getElementById("song").addEventListener("submit" , function(event){
     event.preventDefault();
     displaySongInfo();
-})
-     //module.exports = {
-       // displaySongInfo: displaySongInfo,
-    // };
+}) 
+
+    export const displaySongInfo = displaySongInfo;
