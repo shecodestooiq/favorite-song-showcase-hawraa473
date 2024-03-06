@@ -1,23 +1,22 @@
- function displaysonginfo(){
-let fSong =document.getElementById("fromSong");
-let sContainer =document.getElementById("songContainer");
-let sgName=document.getElementById("songName").value ;
-//console.log(sgName);
-let ylink =document.getElementById("link").Value;
-let yiframe =document.getElementById("iframe");
-let Description =document.getElementById("Description").Value;
-let syr =document.getElementById("year");
-yiframe.src = ylink
-sContainer.style.visibility = 'visible';
-document.getElementById("sName").innerHTML = sgName;
-document.getElementById("textSpace").innerHTML = Description;
-document.getElementById("year").innerHTML = syr;
-fSong.style.visibility = 'hidden'
+function displaySongInfo(){
+    let formDisplay = document.getElementById("song");
+    let display = document.getElementById('info');
+    let Sname = document.getElementById("songName").value;
+    let link = document.getElementById('youtubeLink').value;
+    let iframe = document.getElementById("youtube");
+    let Dicription = document.getElementById(dicription).value;
+    let yr = document.getElementById(year).value;
+    iframe.src = link
+    display.style.visibility = 'visible';
+    document.getElementById("sname").innerHTML = Sname;
+    document.getElementById("dis").innerHTML = Dicription;
+    document.getElementById("songyear").innerHTML = yr;
+    formDisplaylay.style.visibility = 'hidden'
 }
-document.getElementById("formSong").addEventListener("submit" , function(event){
+document.getElementById("song").addEventListener("submit" , function(event){
     event.preventDefault();
-    displaysonginfo();
-});
-    module.exports = {
+    displaySongInfo();
+})
+     module.exports = {
         displaySongInfo: displaySongInfo,
-    };
+     };
